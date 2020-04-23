@@ -3,6 +3,7 @@ spring:
     multipart:
     maxFileSize: 100Mb
     maxRequestSize: 100Mb
+  # 数据库配置
   datasource:
     url: jdbc:mysql://localhost:3306/paper_manage?allowMultiQueries=true&useUnicode=true&characterEncoding=utf8&useSSL=false&useTimezone=true&serverTimezone=GMT%2B8
     username: root
@@ -24,7 +25,17 @@ spring:
     spring.datasource.filters: stat,wall,log4j
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
 
+# Redis配置
   redis:
     host: 127.0.0.1
     port: 6379
     password:
+
+# 接口前缀
+controller:
+  prefix: paper
+
+# mybatis配置
+mybatis:
+  mapper-locations: classpath:mapper/**/*.xml
+  type-aliases-package: com.project.zhang.paper

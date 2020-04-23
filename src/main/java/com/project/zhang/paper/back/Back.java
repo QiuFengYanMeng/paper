@@ -1,5 +1,6 @@
 package com.project.zhang.paper.back;
 
+import com.project.zhang.paper.util.ReflectUtil;
 import lombok.*;
 import lombok.experimental.Accessors;
 
@@ -119,4 +120,9 @@ public class Back<T> implements Serializable {
         return this;
     }
 
+    public Back<T> put(String key, Object value) {
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put(key, value);
+        return (Back<T>) ReflectUtil.getTarget(this, map);
+    }
 }
