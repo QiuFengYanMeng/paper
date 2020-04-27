@@ -3,11 +3,11 @@ spring:
     multipart:
     maxFileSize: 100Mb
     maxRequestSize: 100Mb
-  # Êı¾İ¿âÅäÖÃ
+  # æ•°æ®åº“é…ç½®ä¿¡æ¯
   datasource:
-    url: jdbc:mysql://localhost:3306/paper_manage?allowMultiQueries=true&useUnicode=true&characterEncoding=utf8&useSSL=false&useTimezone=true&serverTimezone=GMT%2B8
+    url: jdbc:mysql://rm-2zeyn0wojiidi3rpw8o.mysql.rds.aliyuncs.com:3306/paper?allowMultiQueries=true&useUnicode=true&characterEncoding=utf8&useSSL=false&useTimezone=true&serverTimezone=GMT%2B8
     username: root
-    password: root
+    password: Wzy666666
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     initialSize: 5
@@ -25,17 +25,17 @@ spring:
     spring.datasource.filters: stat,wall,log4j
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
 
-# RedisÅäÖÃ
+# Redisé…ç½®ä¿¡æ¯
   redis:
     host: 127.0.0.1
     port: 6379
     password:
 
-# ½Ó¿ÚÇ°×º
+# æ¥å£è®¿é—®å‰ç¼€
 controller:
   prefix: paper
 
-# mybatisÅäÖÃ
+# mybatisé…ç½®ä¿¡æ¯
 mybatis:
   mapper-locations: classpath:mapper/**/*.xml
   type-aliases-package: com.project.zhang.paper

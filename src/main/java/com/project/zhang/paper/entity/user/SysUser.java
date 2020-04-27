@@ -3,6 +3,7 @@ package com.project.zhang.paper.entity.user;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  *  <p>
@@ -15,6 +16,9 @@ import java.io.Serializable;
 @Data
 public class SysUser implements Serializable {
 
+    //学生ID
+    private int id;
+
     //登录名
     private String loginName;
 
@@ -26,5 +30,8 @@ public class SysUser implements Serializable {
 
     //账号状态，0正常1禁用
     private int status;
+
+    //用户权限，用于在前端过滤菜单
+    private List<String> auth;
 
 }
